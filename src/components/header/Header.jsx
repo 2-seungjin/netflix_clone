@@ -7,23 +7,29 @@ const HeaderMolecules = styled.div`
   width: 100%;
   height: 100px;
   display: inline-block;
-  background: blue;
   margin: 20px 0 0 0;
 `
 const HeaderBox = styled.div`
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+`
+const FormBox = styled.div`
+  display: flex;
 `
 const Header = () => {
   return (
     <HeaderMolecules>
       <HeaderBox>
         <Logo />
-        <LoginBtn />
-        <LanguageBox />
+        <FormBox>
+          <LanguageBox/>
+          <LoginBtn />
+        </FormBox>
       </HeaderBox>
     </HeaderMolecules>
   );
