@@ -6,7 +6,7 @@ const LogoTitle = styled.div`
 `
 
 const Logo = () => {
-  return <LogoTitle>NETFLX</LogoTitle>;
+  return <LogoTitle><b>NETFLX</b></LogoTitle>;
 }
 
 export default Logo;

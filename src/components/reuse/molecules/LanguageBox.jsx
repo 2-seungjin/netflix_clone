@@ -3,9 +3,13 @@ import {IoMdArrowDropdown} from 'react-icons/io';
 import {VscBroadcast} from 'react-icons/vsc';
 
 const SelectBox = styled.div`
+  display: flex;
   background: rgba(0,0,0,.4);
   border: 1px solid #aaa;
   margin-right: 20px;
+  min-width: 95px;
+  justify-content: center;
+  align-items: center;
 `
 const Select =styled.select`
   -webkit-appearance: none;

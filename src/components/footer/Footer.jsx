@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LanguageBox from '../reuse/molecules/LanguageBox'
 
 const Footers = styled.div`
   padding: 70px 45px 0;
@@ -82,7 +83,7 @@ const Footer = () => {
               </QuestionListItem>
             )}
           </FooterQuestionList>
-          <button>btn</button>
+          <LanguageBox />
           <AddressTitle>넷플릭스 대한민국</AddressTitle>
           <AddressBox>
             {address.map(address =>
