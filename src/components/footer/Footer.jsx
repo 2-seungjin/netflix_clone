@@ -43,6 +43,9 @@ const AddressBox = styled.ul`
 const AddressItem = styled.li`
   font-size: 12px;
 `;
+const LanguageBtnBox = styled.div`
+  width: 100%;
+`
 const Footer = () => {
   const questions = [
     { id:1, question:'자주묻는 질문'},
@@ -83,7 +86,9 @@ const Footer = () => {
               </QuestionListItem>
             )}
           </FooterQuestionList>
-          <LanguageBox />
+          <LanguageBtnBox>
+            <LanguageBox />
+          </LanguageBtnBox>
           <AddressTitle>넷플릭스 대한민국</AddressTitle>
           <AddressBox>
             {address.map(address =>

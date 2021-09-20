@@ -27,13 +27,16 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-weight: 400;
 `
+const H3 = styled.h3`
+  font-weight: 400;
+`
 const MainSectionBox = () => {
   return (
     <SectionBox>
       <FlexBox>
         <H1>영화, TV 프로그램을 무제한으로.</H1>
         <H2>다양한 디바이스에서 시청하세요 언제든 해지하실 수 있습니다.</H2>
-        <h3>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h3>
+        <H3>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</H3>
         <SectionEmailBox />
       </FlexBox>
     </SectionBox>
