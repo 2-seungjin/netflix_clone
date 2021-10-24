@@ -44,7 +44,8 @@ const AddressItem = styled.li`
   font-size: 12px;
 `;
 const LanguageBtnBox = styled.div`
-  width: 100%;
+  width: 100px;
+  min-width: 100px;
 `
 const Footer = () => {
   const questions = [

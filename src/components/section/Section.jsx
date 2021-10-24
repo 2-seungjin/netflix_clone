@@ -31,16 +31,27 @@ const H2 = styled.p`
   font-size: 1.625rem;
   font-weight: 400;
   margin: .75em 0 .25em;
-  word-break:keep-all;
 `;
 const ImgBox = styled.div`
   max-height: 100%;
 `
 const LeftSubImgBox = styled.div`
   position: relative;
-  top: 20px;
+  top: -120px;
+  left: 50px;
   display: flex;
   flex-direction: row;
+  padding: .5em .75em;
+  background: #000;
+  width: 3em;
+  min-width: 15em;
+  height: 3.75em;
+  text-align: left;
+  box-shadow: 0 0 2em 0 #000;
+  border-radius: .75em;
+  border: 2px solid rgba(255,255,255,.25);
+  justify-content: space-between;
+  
 `
 const Img = styled.img`
   max-width: 100%;
@@ -54,12 +65,11 @@ const LeftImg = styled.img`
   position: relative;
   right: 4rem;
 `
-const LeftSubImg = styled.img`
-
-`
-const LeftDownloadImg = styled.img`
-`
 const LeftSubText = styled.div`
+  flex-grow:.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 const VideoBox = styled.div`
   position: absolute;
@@ -72,8 +82,15 @@ const Video = styled.video`
   top: -335px;
   vertical-align: baseline;
 `
+const TowNdVideo = styled.video`
+  width: 70%;
+  height: 80%;
+  position: relative;
+  left: 110px;
+  top: -380px;
+  vertical-align: baseline;
+`
 const Section = (props) => {
-  console.log(props);
   return (
     <Sections>
       {props.sections === 1
@@ -96,11 +113,14 @@ const Section = (props) => {
         props.sections === 2
         ? <ContentBox>
             <ImgBox>
-              <LeftImg src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg' />
+              <LeftImg src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg' alt='Img'/>
               <LeftSubImgBox>
-                <LeftSubImg src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png' />
-                <LeftSubText></LeftSubText>
-                <LeftDownloadImg src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif' />
+                <img src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png' alt='Img'/>
+                <LeftSubText>
+                  <div>기묘한 이야기</div>
+                  <div style={{color:'#0071EB'}}>저장 중...</div>
+                </LeftSubText>
+                <img src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif' alt='Img'/>
               </LeftSubImgBox>
             </ImgBox>
             <LeftTextBox>
@@ -111,15 +131,15 @@ const Section = (props) => {
         props.sections === 3
         ? <ContentBox>
               <TextBox>
-                <h1>TV로 즐기세요.</h1>
-                <H2>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</H2>
+                <h1>다양한 디바이스에서 시청하세요.</h1>
+                <H2>각종 영화와 TV 프로그램을 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</H2>
               </TextBox>
               <ImgBox>
-                <Img src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png' />
+                <Img src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png' alt='Img'/>
                 <VideoBox>
-                  <Video controls autoPlay loop>
+                  <TowNdVideo controls autoPlay loop>
                     <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
-                  </Video>
+                  </TowNdVideo>
                 </VideoBox>
               </ImgBox>
             </ContentBox> :

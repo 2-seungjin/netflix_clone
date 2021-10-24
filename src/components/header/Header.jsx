@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom';
 import Logo from '../footer/molecules/Logo'
 import LoginBtn from './molecules/LoginBtn'
 import LanguageBox from '../reuse/molecules/LanguageBox'
@@ -21,6 +22,7 @@ const HeaderBox = styled.div`
 const FormBox = styled.div`
   display: flex;
 `
+
 const Header = () => {
   return (
     <HeaderMolecules>
@@ -28,7 +30,9 @@ const Header = () => {
         <Logo />
         <FormBox>
           <LanguageBox/>
-          <LoginBtn />
+          <Link to='/kakaologinPage'>
+            <LoginBtn />
+          </Link>
         </FormBox>
       </HeaderBox>
     </HeaderMolecules>

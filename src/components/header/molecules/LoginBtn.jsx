@@ -9,6 +9,7 @@ const Btn = styled.div`
   font-size: 1rem;
   border-radius: 3px;
   cursor: pointer;
+  color: #fff;
 `
 
 const LoginBtn = () => {
